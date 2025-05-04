@@ -75,4 +75,8 @@ async def jawab(ctx):  # Command untuk memeriksa pesan terakhir di channel.
     else:  # Jika tidak sesuai dengan kondisi di atas.
         await ctx.send(f"Jawaban {last_message.content} belum benar")  # Mengirim balasan belum benar.
 
+@bot.command()
+async def ping(ctx):
+    await ctx.send(f"Pong! Bot sedang online, waktu respon: {round(bot.latency * 1000)}")
+
 bot.run(TOKEN)  # Menjalankan bot dengan token yang telah diambil.
