@@ -42,7 +42,7 @@ async def on_message(message):  # Event handler untuk menangani pesan yang diter
 
 @bot.command()
 async def halo(ctx):  # Command untuk mengirim pesan "Halo dari bot Zarick".
-    await ctx.send("Halo dari bot Zarick")  # Mengirim pesan ke channel.
+    await ctx.send("Halo dari bot Zarick. Saya adalah Bot yang dikembangkan oleh tim SpaceEnd https://discord.gg/JDzHU32WVr")  # Mengirim pesan ke channel.
 
 @bot.command()
 async def tambah(ctx, a: int, b: int):  # Command untuk menjumlahkan dua angka.
