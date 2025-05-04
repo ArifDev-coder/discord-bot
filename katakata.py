@@ -1,6 +1,4 @@
-import random
-
-pesan_motivasi = random.choice(([
+pesan_motivasi = [
         "Jangan malas! Ingat tujuanmu! 💪",
         "Setiap detik adalah peluang untuk sukses 🔥",
         "Kamu yang sekarang adalah CEO masa depan 😎",
@@ -224,9 +222,9 @@ pesan_motivasi = random.choice(([
         "Jangan pernah meremehkan kekuatan dari usaha kecil yang konsisten 🛠️",
         "Kamu adalah penulis dari cerita hidupmu sendiri 📖",
         "Jangan biarkan kegagalan sementara menghentikan langkahmu 🦵"
-    ]))
+    ]
 
-pesan_tebakan = random.choice([
+pesan_tebakan = [
             "Kenapa ikan tidak pernah ketabrak kapal? Karena ikan selalu pakai Google Maps 🐟",
             "Apa bedanya kamu sama kalender? Kalender punya tanggal, kamu punya aku ❤️",
             "Kenapa komputer suka ngambek? Karena dia butuh 'refresh' 🔄",
@@ -242,7 +240,7 @@ pesan_tebakan = random.choice([
             "Apa yang bisa terbang tanpa sayap? Waktu ⏳",
             "Kenapa komputer tidak pernah lelah? Karena dia punya 'cache' untuk istirahat 💻",
             "Apa yang selalu ada di depanmu tapi tidak bisa kamu lihat? Masa depanmu 🌟"
-        ])
+        ]
 
 pesan_toxic = ["ASU", "KONTOL", "NGENTOT", "BAJINGAN", "FUCK", "NIGGA"]
 

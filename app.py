@@ -34,7 +34,7 @@ async def on_message(message):  # Event handler untuk menangani pesan yang diter
 
     # Tebak-tebakan
     if "tebakan" in message.content.lower():  # Mengecek apakah pesan mengandung kata "tebakan".
-        await message.channel.send(pesan_tebakan)  # Mengirim pesan tebak-tebakan.
+        await message.channel.send(random.choice(pesan_tebakan))  # Mengirim pesan tebak-tebakan.
     if "awk" in message.content.lower():  # Mengecek apakah pesan mengandung kata "awk".
         await message.channel.send(f"Hahaha lucukan {message.author.name}")  # Mengirim balasan lucu.
     if "anjay" in message.content.lower():  # Mengecek apakah pesan mengandung kata "anjay".
@@ -56,7 +56,7 @@ async def akardari(ctx, a: int):  # Command untuk menghitung akar dari sebuah an
 
 @bot.command()
 async def motivasi(ctx):  # Command untuk mengirim pesan motivasi.
-    await ctx.send(pesan_motivasi)  # Mengirim pesan motivasi yang diambil dari modul katakata.
+    await ctx.send(random.choice(pesan_motivasi))  # Mengirim pesan motivasi yang diambil dari modul katakata.
 
 @bot.command()
 async def jawab(ctx):  # Command untuk memeriksa pesan terakhir di channel.
