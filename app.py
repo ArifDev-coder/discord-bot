@@ -77,6 +77,6 @@ async def jawab(ctx):  # Command untuk memeriksa pesan terakhir di channel.
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send(f"Pong! Bot sedang online, waktu respon: {round(bot.latency * 1000)}")
+    await ctx.send(f"Pong! Bot sedang online, waktu respon: {round(bot.latency * 1000)}ms")
 
 bot.run(TOKEN)  # Menjalankan bot dengan token yang telah diambil.
