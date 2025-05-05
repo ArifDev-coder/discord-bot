@@ -14,10 +14,37 @@ intents.message_content = True
 
 bot = Bot(intents=intents)  # <-- Gunakan discord.Bot untuk slash commands
 
+# ? Bot Event
 @bot.event
 async def on_ready():
     print(f"Bot {bot.user} sudah online!")
 
+@bot.event
+async def on_message(message):
+    if message.author.bot:
+        return
+    
+    content = message.content.lower()
+
+    if any(word in content for word in pesan_salam):
+        await message.channel.send(f"{random.choice(pesan_jawaban)}, {message.author.name}")
+
+    if any(word in content for word in pesan_toxic):
+        await message.channel.send(f"Waduh, Jangan toxic ya {message.author.name}")
+
+    if "tebakan" in content:
+        await message.channel.send(random.choice(pesan_tebakan))
+
+    if "awk" in content:
+        await message.channel.send(f"Hahaa lucu ya, {message.author.name}")
+
+    if "anjay" in content:
+        await message.channel.send(f"Kamu terkesan {message.author.name}")
+
+    await bot.process_application_commands(message)
+
+
+# ? Bot Command
 @bot.slash_command(name="halo", description="Memberi salam dari bot Zarick")
 async def halo(ctx):
     await ctx.respond("Halo dari bot Zarick. Saya adalah Bot yang dikembangkan oleh tim SpaceEnd https://discord.gg/JDzHU32WVr")
